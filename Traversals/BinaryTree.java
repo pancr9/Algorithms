@@ -74,7 +74,8 @@ class BinaryTree {
      * @param node current input node
      */
     void printLevelOrder(Node node) {
-
+        
+        //Queue is an interface, hence needs a concrete class like LinkedList while declaration.
         Queue<Node> nodesQueue = new LinkedList<Node>();
 
         nodesQueue.add(node);
