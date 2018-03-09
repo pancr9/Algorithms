@@ -67,4 +67,30 @@ class BinaryTree {
         //Recurring on right child
         printPreOrder(node.right);
     }
+    
+    /**
+     * Function to print level order traversal for input node.
+     *
+     * @param node current input node
+     */
+    void printLevelOrder(Node node) {
+
+        Queue<Node> nodesQueue = new LinkedList<Node>();
+
+        nodesQueue.add(node);
+        while (!nodesQueue.isEmpty()) {
+
+            //Remove the node head.
+            Node temp = nodesQueue.poll();
+            System.out.print(temp.key + " ");
+
+            //Check for left child. Add to the queue.
+            if (temp.left != null)
+                nodesQueue.add(temp.left);
+
+            //Check for left child. Add to the queue.
+            if (temp.right != null)
+                nodesQueue.add(temp.right);
+        }
+    }
 }
