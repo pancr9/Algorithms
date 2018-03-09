@@ -1,7 +1,7 @@
 package com.company;
 
 /**
- * Sample program to demonstrate inorder, preorder, and postorder traversal.
+ * Sample program to demonstrate inorder, preorder, postorder, and level order traversal.
  *
  * @author Rekhansh Panchal
  */
@@ -25,5 +25,8 @@ public class Main {
 
         System.out.println("\nPostorder traversal of the binary tree is ");
         tree.printPostOrder(tree.root);
+        
+        System.out.println("\nLevel Order traversal of the binary tree is ");
+        tree.printLevelOrder(tree.root);
     }
 }
