@@ -94,4 +94,27 @@ class BinaryTree {
                 nodesQueue.add(temp.right);
         }
     }
+    
+        /**
+     * Recursive Function to print leaf nodes.
+     *
+     * @param node input root node
+     */
+    void printLeafNodes(Node node) {
+
+        if (node == null)
+            return;
+
+        if (node.right == null && node.left == null) {
+            System.out.print(node.key + " ");
+            return;
+        }
+
+        //Check left side
+        printLeafNodes(node.left);
+
+        //Check right side
+        printLeafNodes(node.right);
+    }
+
 }
